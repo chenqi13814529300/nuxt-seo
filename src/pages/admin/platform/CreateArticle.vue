@@ -9,6 +9,16 @@
         id="tit"
         placeholder="请输入内容"
       ></el-input>
+      <label>文章类型：</label>
+      <el-select v-model="article.type" placeholder="请选择">
+        <el-option
+          v-for="item in typeList"
+          :key="item.value"
+          :label="item.label"
+          :value="item.value"
+        >
+        </el-option>
+      </el-select>
       <!-- <quill-editor
         v-model="article.content"
         @blur="onEditorBlur($event)"
@@ -20,7 +30,7 @@
         class="quill-editor"
         :content="article.content"
         v-quill:myQuillEditor="options"
-         @blur="onEditorBlur($event)"
+        @blur="onEditorBlur($event)"
         @focus="onEditorFocus($event)"
         @change="onEditorChange($event)"
       ></div>
@@ -34,6 +44,7 @@
 export default {
   metaInfo() {
     return {
+    
       content: "",
       editorOption: {},
     };
@@ -53,6 +64,21 @@ export default {
   },
   data() {
     return {
+        typeList: [
+        {
+          value: 1,
+          label: "佛像问题",
+        },
+        {
+          value: 2,
+          label: "刻字问题",
+        },
+        {
+          value: 3,
+          label: "其他问题",
+        },
+      ],
+      value: "",
       queryInfo: {
         query: "",
         pageNum: 1,
@@ -119,6 +145,7 @@ export default {
         });
         this.$router.push("articleList");
       } else {
+        console.log(this.article);
         this.$API.manage.createArticle(this.article, this.token).then((res) => {
           this.showMsg(res);
           if (res.status == 200) {

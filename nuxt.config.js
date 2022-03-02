@@ -19,7 +19,7 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/static/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
     ]
   },
 
@@ -55,7 +55,7 @@ export default {
   ],
   toast: {
     position: 'top-center',
-    duration: 2000
+    duration: 1000
   },
   axios: {
     proxy: true, //开启代理

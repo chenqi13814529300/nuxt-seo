@@ -2,19 +2,56 @@
   <div class="">
     <div class="recommend">
       <span>友情链接:</span>
-      <a ref="nofollow" href="https://baike.baidu.com/item/%E5%88%BB%E5%AD%97/2402645?fr=aladdin">刻字</a>
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://baike.baidu.com/item/%E5%88%BB%E5%AD%97/2402645?fr=aladdin"
+        >刻字</a
+      >
 
-      <a ref="nofollow" href="https://tieba.baidu.com/f?kw=%BF%CC%D7%D6&fr=ala0&tpl=5&dyTabStr=MCwzLDYsNCw3LDEsNSwyLDgsOQ%3D%3D">刻字贴吧</a>
-      <a ref="nofollow" href="https://www.chanxan.com/">激光切割机</a>
-      
-      <a ref="nofollow" href="http://www.gudiaotj.com">古雕工艺贴金装饰</a>
-      <a ref="nofollow" href="https://baike.baidu.com/item/%E7%9F%B3%E5%A4%B4%E5%88%BB%E5%AD%97/8207412?fr=aladdin">石头刻字</a>
-      <a ref="nofollow" href="https://baike.baidu.com/item/%E8%B4%B4%E9%87%91/15415179?fromtitle=%E8%B4%B4%E9%87%91%E7%AE%94&fromid=8554675&fr=aladdin">贴金箔</a>
-      <a ref="nofollow" href="http://www.shiyizhang.com/tags/184-0.html">刻字工厂</a>
-      <a ref="nofollow" href="https://b2b.baidu.com/slist/053074397b64">爱采购</a>
-      <a ref="nofollow" href="https://tieba.baidu.com/f?dyTabStr=MCw2LDQsMywxLDUsMiw3LDgsOQ%3D%3D&fr=ala0&kw=%CC%F9%B0%C9&tpl=5">百度贴吧</a>
-      
-      
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://tieba.baidu.com/f?kw=%BF%CC%D7%D6&fr=ala0&tpl=5&dyTabStr=MCwzLDYsNCw3LDEsNSwyLDgsOQ%3D%3D"
+        >刻字贴吧</a
+      >
+      <a ref="nofollow" target="_blank" href="https://www.chanxan.com/"
+        >激光切割机</a
+      >
+
+      <a ref="nofollow" target="_blank" href="http://www.gudiaotj.com"
+        >古雕工艺贴金装饰</a
+      >
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://baike.baidu.com/item/%E7%9F%B3%E5%A4%B4%E5%88%BB%E5%AD%97/8207412?fr=aladdin"
+        >石头刻字</a
+      >
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://baike.baidu.com/item/%E8%B4%B4%E9%87%91/15415179?fromtitle=%E8%B4%B4%E9%87%91%E7%AE%94&fromid=8554675&fr=aladdin"
+        >贴金箔</a
+      >
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="http://www.shiyizhang.com/tags/184-0.html"
+        >刻字工厂</a
+      >
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://b2b.baidu.com/slist/053074397b64"
+        >爱采购</a
+      >
+      <a
+        ref="nofollow"
+        target="_blank"
+        href="https://tieba.baidu.com/f?dyTabStr=MCw2LDQsMywxLDUsMiw3LDgsOQ%3D%3D&fr=ala0&kw=%CC%F9%B0%C9&tpl=5"
+        >百度贴吧</a
+      >
     </div>
     <div class="footer">
       <div class="left">
@@ -49,9 +86,12 @@
       <p>
         Copyright © 2020-2022 南京市江宁区金瑞祥贴金工艺厂 版权所有
         <a
-        class="icp"
-         href="https://beian.miit.gov.cn/#/Integrated/index">苏ICP备2021008093号</a>
-        
+          ref="nofollow"
+          class="icp"
+          target="_blank"
+          href="https://beian.miit.gov.cn/#/Integrated/index"
+          >苏ICP备2021008093号</a
+        >
       </p>
     </div>
   </div>
@@ -62,11 +102,10 @@ export default {};
 </script>
 
 <style lang="less" scoped>
-
 .recommend {
   width: 100%;
   height: 40px;
- background-color: rgb(13, 49, 37);
+  background-color: rgb(13, 49, 37);
   span {
     padding-left: 4%;
     font-size: 18px;
@@ -77,9 +116,8 @@ export default {};
     line-height: 40px;
     color: rgba(209, 195, 195, 0.658);
 
-
     font-size: 12px;
-   text-decoration: none;
+    text-decoration: none;
   }
 }
 .footer {
@@ -147,10 +185,9 @@ export default {};
     line-height: 40px;
     margin: 0;
   }
-  .icp{
-  text-decoration: none;
+  .icp {
+    text-decoration: none;
     color: white;
-  
-}
+  }
 }
 </style>> 

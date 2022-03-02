@@ -6,6 +6,11 @@
       <el-breadcrumb-item>工程案例</el-breadcrumb-item>
     </el-breadcrumb>
     <p class="title">工程案例</p>
+    <div>
+     <p> 很多人觉得我们这些图片比不上其他公司，觉得我们技术比不上他们，如果有这种想法真的不是你们的错，是我们把现场原图直接拍下来了，并没有进行一些加工。</p>
+     <p>对于贴金箔、大理石刻字等我们从不输其他人，我们公司有着悠久的历史，从2013年就开始经营这个行业，有着不错的口碑，我们因为注重经济划算，基本从未花钱宣传，做广告太费钱了，这样给老板们做项目的时候就需要提高报价。</p>
+     <p>这并不是我的初心，我想让双方花最少的钱，办最踏实的事情，至于你可能怀疑，<strong>你做的网站我都看到了，咋叫没有花钱宣传呢，老板这你就冤枉我了，这网站是我儿子帮我做的，现在研一了，像我们这些农村人生活真的不易，一辈子就靠这技术养家糊口。</strong></p>
+    </div>
     <el-tabs
       tab-position="left"
       style="height: 400px"
@@ -30,33 +35,40 @@
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
-import axios from 'axios'
+import axios from "axios";
 
 export default {
   async asyncData() {
-     let rs = await axios.get("/api/img/getHomeImg", {
+    let previewList=[]
+    let rs = await axios.get("/api/img/getHomeImg", {
       params: {
         typeId: 6,
       },
     });
+    for (let i = 0; i < rs.data.length; i++) {
+      previewList[i] = rs.data[i].imgUrl;
+    }
     return {
-      various_img:rs.data,
+      various_img: rs.data,
+      previewList:previewList
     };
   },
-    head: {
-    title: '「金瑞祥贴金案例页」佛像贴金_大理石刻字_公司门牌_室内贴金_石刻字_南京专业贴金刻字',
+  head: {
+    title:
+      "「金瑞祥贴金案例页」佛像贴金_大理石刻字_公司门牌_室内贴金_石刻字_南京专业贴金刻字",
     meta: [
       {
-        hid: 'description',
-        name: 'description',
-        content: '金瑞祥贴金经营数十年，不满意不收费，精通【贴金装潢】｜【佛像贴金】｜【大理石贴金】｜【大理石刻字】｜【庙宇装潢】'
-      },{
-         hid: 'keywords',
-        name: 'keywords',
-        content: '南京佛像贴金,公司门牌,刻字'
-      }
+        hid: "description",
+        name: "description",
+        content:
+          "金瑞祥贴金经营数十年，不满意不收费，精通【贴金装潢】｜【佛像贴金】｜【大理石贴金】｜【大理石刻字】｜【庙宇装潢】",
+      },
+      {
+        hid: "keywords",
+        name: "keywords",
+        content: "南京佛像贴金,公司门牌,刻字",
+      },
     ],
-    
   },
   //import引入的组件需要注入到对象中才能使用
   components: {},
@@ -83,9 +95,8 @@ export default {
   methods: {
     getVariousImg() {
       this.$API.image
-        .getHomeImg(this.$constant.IMG_TYPE.IMG_TIE_JIN_BO)
+        .getHomeImg(this.$constant.IMG_TYPE.IMG_SHI_NEI_TIE)
         .then((res) => {
-          console.log(res);
           this.various_img = res.data;
           for (let i = 0; i < this.various_img.length; i++) {
             this.previewList[i] = this.various_img[i].imgUrl;
@@ -93,9 +104,10 @@ export default {
         });
     },
     handleClick(tab, event) {
+      console.log(tab.index);
       switch (tab.index) {
         case "0":
-          this.imgType = this.$constant.IMG_TYPE.IMG_TIE_JIN_BO;
+          this.imgType = this.$constant.IMG_TYPE.IMG_SHI_NEI_TIE;
           break;
         case "1":
           this.imgType = this.$constant.IMG_TYPE.IMG_FOU_XIANG;
@@ -107,7 +119,7 @@ export default {
           this.imgType = this.$constant.IMG_TYPE.IMG_MIAO_JIN_QI;
           break;
         case "4":
-          this.imgType = this.$constant.IMG_TYPE.IMG_SHI_NEI_TIE;
+          this.imgType = this.$constant.IMG_TYPE.IMG_TIE_JIN_BO;
           break;
       }
       this.$API.image.getHomeImg(this.imgType).then((res) => {
@@ -115,12 +127,13 @@ export default {
         for (let i = 0; i < this.various_img.length; i++) {
           this.previewList[i] = this.various_img[i].imgUrl;
         }
+        console.log(this.various_img);
+        console.log(this.previewList);
       });
     },
   },
   //生命周期 - 创建完成（可以访问当前this实例）
-  created() {
-  },
+  created() {},
   //生命周期 - 挂载完成（可以访问DOM元素）
   mounted() {
     this.getVariousImg();
@@ -152,6 +165,11 @@ export default {
     color: rgb(87, 28, 17);
   }
 }
+  p {
+    font-size: 18px;
+    color: rgb(83, 62, 22);
+    text-indent: 2em;
+  }
 .type_img_list {
   display: flex;
   flex-wrap: wrap;

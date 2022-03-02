@@ -49,7 +49,6 @@ export default {
   //   ],
   // },
   async asyncData(context) {
-    console.log(context);
     let rs = await axios.get("/api/article/articleDetails", {
       params: {
         id: context.params.id,

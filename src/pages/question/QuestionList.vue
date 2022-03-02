@@ -106,7 +106,6 @@ export default {
     },
     getArticleList() {
       this.$API.article.getArticleList(this.queryInfo).then((res) => {
-        console.log(res);
         if (res.status == 200) {
           this.articleList = res.data.list;
           this.total = res.data.total;
@@ -130,7 +129,6 @@ export default {
     //   this.showingArticle = item;
     // },
    articleDetails(item) {
-      console.log(item);
       if (!sessionStorage.getItem("read")) {
         sessionStorage.setItem("read", true);
         item.readTimes++;

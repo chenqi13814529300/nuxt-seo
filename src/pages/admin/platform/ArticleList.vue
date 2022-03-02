@@ -88,14 +88,12 @@ export default {
         .getArticleList(this.queryInfo, this.token)
         .then((res) => {
           this.showMsg(res);
-          console.log(res);
           if (res.status == 200) {
             this.articleList = res.data.list;
           }
         });
     },
       handleClick1(row) {
-      console.log(row);
       this.$router.push({
         path:"createArticle",
         query:{
@@ -104,10 +102,8 @@ export default {
       })
     },
     handleClick2(row) {
-      console.log(row.id);
       this.$API.manage.deleteArticle(this.token, row.id).then((res) => {
         this.showMsg(res);
-        console.log(res);
         if (res.status == 200) {
           this.getArticleList()
         }

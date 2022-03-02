@@ -48,9 +48,18 @@
           <p>
             佛陀成道开悟后第八年，思欲报答其母——摩耶夫人生育之恩，因而上升至忉利天，趺坐于善法堂之金石上。摩耶夫人出两道乳润世尊的口唇，以示亲子之缘，佛为其母说法。
           </p>
-          
-          <p>时目犍连尊者运神通力，与天匠同往忉利天，将世尊相好先绘制成图，然后下来依图刻像。不日功成，像高7尺，面目手足皆紫金色。大王见佛陀相好，心生净信，得柔顺意，烦恼业障消除，是为造像之始。</p>
-          <p>现在佛像贴金已经这么流行了，<router-link to="/material">贴金的材料</router-link>也是重中之重，关乎着成品的成色,至于不同的金箔贴出来的效果不一样，所以接着大家对于<router-link to="price">贴金箔的价格</router-link>又有了一定的评估</p>
+
+          <p>
+            时目犍连尊者运神通力，与天匠同往忉利天，将世尊相好先绘制成图，然后下来依图刻像。不日功成，像高7尺，面目手足皆紫金色。大王见佛陀相好，心生净信，得柔顺意，烦恼业障消除，是为造像之始。
+          </p>
+          <p>
+            现在佛像贴金已经这么流行了，<router-link to="/material"
+              >贴金的材料</router-link
+            >也是重中之重，关乎着成品的成色,至于不同的金箔贴出来的效果不一样，所以接着大家对于<router-link
+              to="price"
+              >贴金箔的价格</router-link
+            >又有了一定的评估
+          </p>
           <p>
             石刻文字是人类历史初期书籍形式之一。在石头上刻字是世界上各个民族都使用过的一种记载方法。在石器时代的人类就会用利器在岩石上雕琢出图案，叫做岩画，图形记录了当时的事迹，逐渐演变成形意文字
           </p>
@@ -59,18 +68,26 @@
             石刻：石刻
             泛指镌刻有文字、图案的碑碣等石制品或摩崖石壁。在书法领域，也有把镌刻后，原来无意作为书法流传的称为“石刻”，一般不表书者姓名，三国六朝以前多为；而有意作为书法流传的称为“刻石”，隋唐以后多为，通常标刻书者姓名。----《古代碑帖鉴赏》
           </p>
-         
+
           <p>
             石刻文字是人类历史初期书籍形式之一。在石头上刻字是世界上各个民族都使用过的一种记载方法。在石器时代的人类就会用利器在岩石上雕琢出图案，叫做岩画，图形记录了当时的事迹，逐渐演变成形意文字，到了文明时代，石头刻字和摩崖石刻多用来雕刻名山名胜的书法题记，碑文刻字来记录当时发生的事件和功德陈述等，现在的石头刻字多半是用在公司的门牌园林大理石刻字方面，顾客们都非常喜爱
-           <router-link to="/question/details/21">那么刻字多少钱一个平方呢？</router-link>
+            <router-link to="/question/details/21"
+              >那么刻字多少钱一个平方呢？</router-link
+            >
           </p>
           <p>
-            <router-link to="introduce">我们</router-link>作为经营【十】余年的老厂，诚信经营是不用想的，不然我们也不会一直经营到现在，能维持生计一半都靠老顾客的照顾。网站上贴金刻字的图片均【无P】、【真实】，我们都是老实人，也不会营销，网站也是儿子帮忙做的。如果有什么疑问可以在<router-link to="/comment">留言</router-link>模块给我们留言，我们会尽力满足你们的要求
+            <router-link to="introduce">我们</router-link
+            >作为经营【十】余年的老厂，诚信经营是不用想的，不然我们也不会一直经营到现在，能维持生计一半都靠老顾客的照顾。网站上贴金刻字的图片均【无P】、【真实】，我们都是老实人，也不会营销，网站也是儿子帮忙做的。如果有什么疑问可以在<router-link
+              to="/comment"
+              >留言</router-link
+            >模块给我们留言，我们会尽力满足你们的要求
           </p>
         </div>
       </div>
 
-      <el-divider content-position="right"> <router-link to="/case">贴与刻，均亲力亲为</router-link></el-divider>
+      <el-divider content-position="right">
+        <router-link to="/case">贴与刻，均亲力亲为</router-link></el-divider
+      >
 
       <el-tabs
         tab-position="left"
@@ -130,70 +147,70 @@
     <el-divider content-position="left"
       >站在巨人的肩膀上，我们才能看的更远</el-divider
     >
-      <div class="article_box">
-    <div>
-      <p>
-        <span class="title">佛像贴金箔阅读推荐</span>
-        <span class="more" @click="allQuestion">
-           <router-link to="/question">+More</router-link>
-        </span>
-      </p>
+    <div class="article_box">
+      <div>
+        <p>
+          <span class="title">佛像贴金箔阅读推荐</span>
+          <span class="more" @click="allQuestion">
+            <router-link to="/question">+More</router-link>
+          </span>
+        </p>
 
-      <div
-        class="list"
-        v-for="(item, index) in articleByType1"
-        :key="index"
-        @click="articleDetails(item)"
-      >
-        <div>
-          <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
+        <div
+          class="list"
+          v-for="(item, index) in articleByType1"
+          :key="index"
+          @click="articleDetails(item)"
+        >
+          <div>
+            <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span class="title">大理石刻字阅读推荐</span>
+          <span class="more">
+            <router-link to="/question">+More</router-link>
+          </span>
+        </p>
+
+        <div
+          class="list"
+          v-for="(item, index) in articleByType2"
+          :key="index"
+          @click="articleDetails(item)"
+        >
+          <div>
+            <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p>
+          <span class="title">其他问题阅读推荐</span>
+          <span class="more">
+            <router-link to="/question">+More</router-link>
+          </span>
+        </p>
+
+        <div
+          class="list"
+          v-for="(item, index) in articleByType3"
+          :key="index"
+          @click="articleDetails(item)"
+        >
+          <div>
+            <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
+          </div>
         </div>
       </div>
     </div>
-    <div>
-      <p>
-        <span class="title">大理石刻字阅读推荐</span>
-        <span class="more">
-          <router-link to="/question">+More</router-link>
-        </span>
-      </p>
-
-      <div
-        class="list"
-        v-for="(item, index) in articleByType2"
-        :key="index"
-        @click="articleDetails(item)"
-      >
-        <div>
-          <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <p>
-        <span class="title">其他问题阅读推荐</span>
-        <span class="more">
-           <router-link to="/question">+More</router-link>
-        </span>
-      </p>
-
-      <div
-        class="list"
-        v-for="(item, index) in articleByType3"
-        :key="index"
-        @click="articleDetails(item)"
-      >
-        <div>
-          <p><i class="el-icon-caret-right"></i>{{ item.title }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 import myArticle from "./Article";
 export default {
   async asyncData() {
@@ -202,53 +219,58 @@ export default {
         typeId: 4,
       },
     });
-     let rs2 = await axios.get("/api/img/getHomeImg", {
+    let rs2 = await axios.get("/api/img/getHomeImg", {
       params: {
         typeId: 1,
       },
     });
-     let rs3 = await axios.get("/api/img/getHomeImg", {
+    let previewList = [];
+
+    let rs3 = await axios.get("/api/img/getHomeImg", {
       params: {
         typeId: 6,
       },
     });
-     let queryInfo1 = {
+    for (let i = 0; i < rs3.data.length; i++) {
+      previewList[i] = rs3.data[i].imgUrl;
+    }
+    let queryInfo1 = {
       type: 1,
-       pageNum: 1,
-        pageSize: 10,
+      pageNum: 1,
+      pageSize: 10,
     };
     let queryInfo2 = {
       type: 2,
-       pageNum: 1,
-        pageSize: 10,
+      pageNum: 1,
+      pageSize: 10,
     };
     let queryInfo3 = {
       type: 3,
-       pageNum: 1,
-        pageSize: 10,
+      pageNum: 1,
+      pageSize: 10,
     };
     let res1 = await axios.get("/api/article/articleByType", {
       params: {
         ...queryInfo1,
       },
     });
-      let res2 = await axios.get("/api/article/articleByType", {
+    let res2 = await axios.get("/api/article/articleByType", {
       params: {
         ...queryInfo2,
       },
     });
-      let res3 = await axios.get("/api/article/articleByType", {
+    let res3 = await axios.get("/api/article/articleByType", {
       params: {
         ...queryInfo3,
       },
-    })
-    console.log(rs3);
+    });
     return {
       lun_bo_img: rs1.data,
-      shu_img:rs2.data,
-      showing:rs2.data[0].imgUrl,
-      various_img:rs3.data,
-       articleByType1: res1.data.list,
+      shu_img: rs2.data,
+      showing: rs2.data[0].imgUrl,
+      various_img: rs3.data,
+      previewList: previewList,
+      articleByType1: res1.data.list,
       articleByType2: res2.data.list,
       articleByType3: res3.data.list,
     };
@@ -269,10 +291,10 @@ export default {
       imgType: "",
       previewList: [],
       activeStory: ["1"],
-     
+
       total: 0,
-      result:null,
-      project: 'default'
+      result: null,
+      project: "default",
     };
   },
   components: {
@@ -302,7 +324,6 @@ export default {
         for (let i = 0; i < this.various_img.length; i++) {
           this.previewList[i] = this.various_img[i].imgUrl;
         }
-        console.log(this.previewList);
       });
     },
     getLunBoImg() {
@@ -336,18 +357,28 @@ export default {
       this.showing = url;
       this.activeIndex = index;
     },
-     allQuestion() {
+    allQuestion() {
       this.$router.push("/question");
     },
-     articleDetails(item) {
+    articleDetails(item) {
+      // 刷新不增加阅读次数
+      if (!sessionStorage.getItem("read")) {
+        sessionStorage.setItem("read", true);
+        item.readTimes++;
+        // 修改语句，修改readTimes字段
+        this.$API.article.updateArticle(item).then((res) => {
+          if (res.status == 200) {
+          }
+          sessionStorage.removeItem("read");
+        });
+      }
       this.$router.push({
         path: "/question/details/" + item.id,
       });
     },
   },
   computed: {},
-  created() {
-  },
+  created() {},
   mounted() {
     // this.getVariousImg();
   },
@@ -355,8 +386,8 @@ export default {
 </script>
 
 <style lang="less" scoped>
-/deep/.a{
-text-decoration: none;
+/deep/.a {
+  text-decoration: none;
 }
 img {
   width: 100%;
